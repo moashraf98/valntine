@@ -133,7 +133,34 @@ display: inline-block;
     line-height: 1.4;
     text-align: center;
     display: inline-block;
-    padding: 10px 20px;
+    padding: 
+    10px 20px;
     background-color: rgba(255,240,240,0.5);
     border-radius: 12px;
+}
+/* 1. Make the window a reference point for the text */
+.letter-window {
+    position: relative;
+}
+
+/* 2. Create a patch to cover "LOVE" and add "Meredith" */
+.letter-window::before {
+    content: "MEREDITH"; /* The new name */
+    position: absolute;
+    
+    /* Position - adjust these % if needed to line up perfectly */
+    top: 3.2%; 
+    left: 7.2%;
+    
+    /* Styling to match the original theme */
+    background-color: #f7b4bb; /* Matches the header pink */
+    color: #ae4d5a;           /* Matches the dark pink text color */
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    
+    /* Ensures it sits on top of the background image */
+    z-index: 10;
+    padding: 0 5px;
 }
